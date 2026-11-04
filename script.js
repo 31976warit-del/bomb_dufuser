@@ -184,3 +184,39 @@ function gameOver() {
     `;
     switchScreen('gameover-screen');
 }
+
+
+function goHome() {
+    clearInterval(timerInterval);
+    document.body.classList.remove('danger-bg');
+    switchScreen('start-screen');
+}
+
+function gameOver() {
+    clearInterval(timerInterval);
+    document.body.classList.remove('danger-bg');
+    document.getElementById('final-score').innerText = score;
+    document.getElementById('final-level').innerText = level - 1;
+    document.getElementById('explanation-text').innerHTML = `
+        <b>โจทย์:</b> ${currentProblem.equation}<br>
+        ${currentProblem.steps}
+    `;
+    
+    // อัปเดตส่วนปุ่มควบคุมในหน้า Game Over
+    const gameOverScreen = document.getElementById('gameover-screen');
+    
+    // ค้นหาหรือสร้างกลุ่มปุ่มกด
+    let btnGroup = gameOverScreen.querySelector('.btn-group');
+    if (!btnGroup) {
+        btnGroup = document.createElement('div');
+        btnGroup.className = 'btn-group';
+        gameOverScreen.appendChild(btnGroup);
+    }
+    
+    btnGroup.innerHTML = `
+       
+        <button class="btn-action btn-home" onclick="goHome()">กลับหน้าแรก 🏠</button>
+    `;
+
+    switchScreen('gameover-screen');
+}

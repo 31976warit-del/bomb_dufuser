@@ -130,3 +130,27 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+<!-- หน้าที่ 4: หน้าเกมจบ (Game Over / Exploded) -->
+<div id="gameover-screen" class="screen">
+    <h1 style="font-size: 3rem; color: #ff3333; margin-bottom: 10px;">💥 BOOM!</h1>
+    <p style="font-size: 1.2rem; color: #aaa;">ระเบิดทำงาน! คุณถอดรหัสไม่ทันเวลา</p>
+
+    <div style="background: #1e1e28; padding: 20px; border-radius: 12px; margin: 20px 0;">
+        <p style="margin: 5px 0; font-size: 1.1rem;">คะแนนรวม: <b id="final-score" style="color: #00ff66;">0</b></p>
+        <p style="margin: 5px 0; font-size: 1.1rem;">ผ่านไปได้: <b id="final-level" style="color: #ffcc00;">0</b> ด่าน</p>
+    </div>
+
+    <div class="explanation-box" id="explanation-box">
+        <div style="color: #ffcc00; font-weight: bold; margin-bottom: 8px;">🔍 เฉลยสมการที่พลาดไป:</div>
+        <div id="explanation-text"></div>
+    </div>
+
+    <!-- ปุ่มควบคุม Restart & Home -->
+    <div class="btn-group">
+        <button class="btn-action btn-restart" onclick="startGame()">ลองใหม่อีกครั้ง 🔄</button>
+        <button class="btn-action btn-home" onclick="goHome()">กลับหน้าแรก 🏠</button>
+    </div>
+</div>

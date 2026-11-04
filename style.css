@@ -349,3 +349,39 @@ body {
 .highlight-red { color: #ff4444; font-weight: bold; }
 .highlight-green { color: #00ff66; font-weight: bold; }
 .highlight-yellow { color: #ffcc00; font-weight: bold; }
+
+
+
+
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* รองรับหน้าจอมือถือขนาดเล็ก */
+}
+
+.btn-restart {
+    background: #00ff66 !important;
+    color: #000 !important;
+    flex: 1;
+    min-width: 140px;
+    margin-top: 0 !important;
+}
+
+.btn-home {
+    background: #333345 !important;
+    color: #ffffff !important;
+    border-color: #555566 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+    flex: 1;
+    min-width: 140px;
+    margin-top: 0 !important;
+}
+
+.btn-home:hover {
+    background: #44445a !important;
+    border-color: #ffcc00 !important;
+}
